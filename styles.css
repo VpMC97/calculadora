@@ -1,0 +1,139 @@
+body{
+    font-family: monospace, sans-serif;
+    background-color: #161822;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+div{
+    box-sizing: border-box;
+    position: relative;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    background-color: #2d2f384c;
+    padding: 1px;
+    color: #a8a9ae;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+a:visited{
+    color:#a8a9ae;
+}
+
+button{
+    background-color: #161822;
+    color: white;
+    border: 1px solid #2d2f38;
+    border-radius: 5px;
+    width: 60px;
+    height: 50px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #2d2f38;
+}
+
+button:active{
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, font-size 0.2s ease-in-out;
+    width: 56px;
+    height: 46px;
+    font-size: 14px;
+}
+
+.typeTitle{
+    position: fixed;
+    top: 60px;
+}
+
+.typeTitle h1{
+    color: #060607;
+    overflow: hidden;
+    border-right: .10em solid #2d2f38;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    animation-fill-mode: both;
+    animation: typing 4s steps(17) infinite alternate, blink-line .5s step-end infinite;
+}
+
+.calculator{
+    background-color: #161822fb;
+    width: auto;
+    padding: 15px;;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.484);
+    border-radius: 10px;
+}
+
+.calculator__display{
+    background-color: #2d2f384c;
+    color: white;
+    border: 1px solid #2d2f38;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.calculator__buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+}
+
+.buttons:last-child{
+    outline: 1px solid #2d2f38;
+    outline-offset: -2px;
+    background-color: #2d2f38;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+.buttons:last-child:hover{
+    background-color: transparent;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blink-line{
+    from, to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: #2d2f38;
+    }
+}
